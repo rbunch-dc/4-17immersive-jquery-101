@@ -39,6 +39,10 @@ $(document).ready(function(){
 
 	// }
 
+	$('#thing').mouseenter(function(){
+		console.log("Mouse entered the danger zone!!")
+	})
+
 	$('button').click(function(){
 		// console.log(this);
 		// console.log($(this).attr('toDo'));
@@ -78,9 +82,38 @@ $(document).ready(function(){
 			$('#thing').addClass('crazy-css');
 		}else if(whatToDo == 'removeClass'){
 			$('#thing').removeClass('crazy-css');
+		}else if(whatToDo == 'fadeToggle'){
+			$('#thing').fadeToggle(1500, ()=>{
+				console.log("Fading is finished!")
+			});
+		}else if(whatToDo == 'slideToggle'){
+			$('#thing').slideToggle(1500, ()=>{
+				console.log("Fading is finished!")
+			});
+		}else if(whatToDo == 'animate'){
+			$('#thing').animate({
+				width: "40%",
+				opacity: 0.3,
+				fontSize: "40px",
+				borderWidth: "10px"
+			},1500)
+		}else if(whatToDo == 'goodbye'){
+			$('#thing').animate({
+				marginLeft: "-1500px",
+			},1000)
+		}else if(whatToDo == 'hello'){
+			$('#thing').animate({
+				marginLeft: "0px",
+			},1000)
+		}else if(whatToDo == 'scroll'){
+			$('#thing').scroll()
+		}else if(whatToDo == 'loop'){
+			$('button').each(()=>{
+				// alert(this);
+				console.log(this.x)
+			})
 		}
 	});
-
 });
 
 // 1. Wait until ABSOLUTELY EERYTHING has loaded (pictures, video, etc.)
