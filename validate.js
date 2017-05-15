@@ -5,6 +5,9 @@ $(document).ready(function(){
 
 	// })
 	$('.sign-up-form').submit(function(event){
+		$('.error').each(function(){
+			$(this).html('')
+		})
 		event.preventDefault();
 		console.log("User submitted the form!");
 		$('input').each(function(){
@@ -20,5 +23,27 @@ $(document).ready(function(){
 				$(errorDivClassName).html('Field cannot be empty.');
 			}
 		});
+
+		var password = $('.password').val();
+		var password2 = $('.password2').val();
+		if(password !== password2){
+			$('.password-error').html('Your passwords do not match.')
+		}
+		// Force user to have a number in the password
+		// Keep track of numberFound as a boolean
+		var numberFound = false;
+		for(let i = 0; i < password.length; i++){
+			if(isNaN(Number(password[i]))){
+				// this is not a number
+				continue;
+			}else{
+				// this is a Number
+				numberFound = true;
+			}
+		}
+		if(!numberFound){
+			$('.password-error').html('Your password must contain one number.')			
+		}
+
 	});
 });
