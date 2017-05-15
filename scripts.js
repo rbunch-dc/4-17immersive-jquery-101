@@ -50,6 +50,34 @@ $(document).ready(function(){
 			$('#thing').show();
 		}else if(whatToDo == 'toggle'){
 			$('#thing').toggle();
+		}else if(whatToDo == 'html'){
+			// if you don't pass html() an arg, it will simply return innerHTML
+			console.log($('#thing').html());
+			// If you pass html() an arg, innerHTML will change to that
+			$('#thing').html('<strong>I am new innerHTML.</strong>');
+		}else if(whatToDo == 'text'){
+			$('#thing').text('<strong>I am new innerHTML.</strong>');
+		}else if(whatToDo == 'prepend'){
+			// get the innerHTML, and += to the beginning
+			// innerHTML = newText + innerHTML
+			$('#thing').prepend('<strong>I am new innerHTML.</strong>');
+		}else if(whatToDo == 'append'){
+			// get the innerHTML, and += to the end
+			// innerHTML += newText
+			$('#thing').append('<strong>I am HTML added to the end.</strong>');
+		}else if(whatToDo == 'css'){
+			// css method takes an argument, an object, just like csss
+			// it will apply the css as a style attribute
+			$('#thing').css({
+				'color':'orange',
+				'font-size':'80px',
+				'background-color':'blue',
+				'border-radius':'50%'
+			});
+		}else if(whatToDo == 'addClass'){
+			$('#thing').addClass('crazy-css');
+		}else if(whatToDo == 'removeClass'){
+			$('#thing').removeClass('crazy-css');
 		}
 	});
 

@@ -5,6 +5,15 @@
 
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
+	<style>
+		.crazy-css{
+			font-size: 100px;
+			color: brown;
+			background-color: pink;
+			margin-left: 30px;
+		}
+	</style>
+
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script type="text/javascript" src="scripts.js"></script>
 </head>
@@ -27,9 +36,49 @@
 			<button class="btn btn-primary" toDo="toggle">
 				Toggle
 			</button>
+		</div>
+		<div class="col-sm-3">
+			<button class="btn btn-primary" toDo="html">
+				HTML
+			</button>
 		</div>		
 	</div>
 
+	<div class="row">
+		<div class="col-sm-3">
+			<button class="btn btn-danger" toDo="text">
+				Text
+			</button>
+		</div>
+		<div class="col-sm-3">
+			<button class="btn btn-danger" toDo="prepend">
+				Prepend
+			</button>
+		</div>		
+		<div class="col-sm-3">
+			<button class="btn btn-danger" toDo="append">
+				Append
+			</button>
+		</div>			
+		<div class="col-sm-3">
+			<button class="btn btn-danger" toDo="css">
+				CSS
+			</button>
+		</div>			
+	</div>
+	<div class="row">
+		<div class="col-sm-3">
+			<button class="btn btn-danger" toDo="addClass">
+				Add Class
+			</button>
+		</div>			
+		<div class="col-sm-3">
+			<button class="btn btn-danger" toDo="removeClass">
+				Remove Class
+			</button>
+		</div>			
+
+	</div>
 	<div class="row">
 		<div class="col-sm-6 col-sm-offset-3 text-center">
 			<button class="btn btn-success thing" id="thing">
